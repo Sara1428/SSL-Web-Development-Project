@@ -1,0 +1,32 @@
+[
+    {
+        "username": "raju1990",
+        "password": "raju@123",
+        "secret_question": "What is your mother's maiden name?",
+        "secret_answer": "Patel"
+    },
+    {
+        "username": "meena_sharma",
+        "password": "meena@2022",
+        "secret_question": "What is your favorite childhood nickname?",
+        "secret_answer": "Mona"
+    },
+    {
+        "username": "amit_delhi",
+        "password": "amit1234",
+        "secret_question": "What is your favorite food?",
+        "secret_answer": "Paneer Tikka"
+    },
+    {
+        "username": "deepa_mumbai",
+        "password": "deepa@789",
+        "secret_question": "What is the name of your first pet?",
+        "secret_answer": "Tommy"
+    },
+    {
+        "username": "arjun_bangalore",
+        "password": "arjun@567",
+        "secret_question": "What is your favorite holiday destination?",
+        "secret_answer": "Goa"
+    }
+]
