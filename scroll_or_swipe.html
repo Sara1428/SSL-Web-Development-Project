@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Document</title>
+</head>
+<body style="background-color: rgb(228, 68, 166);">
+
+</body>
+<script>
+
+    let xh = 1;
+    let v =-1;
+    let i = 0;
+
+    fetch('./students.json')
+        .then(res => res.json())
+        .then(
+            data => {
+                
+                data.forEach(element => {
+                    if(xh==1){
+                        xh=element['IITB Roll Number'];
+                    }
+                    let x = element['IITB Roll Number'];
+                    const profile = document.createElement("div");
+                    profile.setAttribute('id',x);
+                    profile.setAttribute('class','pro');
+                    document.body.appendChild(profile);
+                    document.getElementById(x).style.border='2px solid rgb(208, 2, 81)';
+                    document.getElementById(x).style.boxShadow='10px 10px 10px rgb(228, 68, 166)';
+                    if(i%2==0){
+                    document.getElementById(x).style.backgroundColor='rgb(248, 217, 248)';
+                }else{
+                    document.getElementById(x).style.backgroundColor='white';
+                }
+                    document.getElementById(x).style.height='315px';
+                    document.getElementById(x).style.width='1060px';
+                    document.getElementById(x).style.margin='0px';
+                    document.getElementById(x).style.display='block';
+
+                    let path = element['Photo'];
+                    let img = document.createElement('img');
+                    img.setAttribute('id','img'+x)
+                    img.src = path;
+                    document.getElementById(x).appendChild(img);
+                    document.getElementById('img'+x).style.width='310px';
+                    document.getElementById('img'+x).style.float='left';
+                    const descrp= document.createElement('p');
+                    descrp.setAttribute('id','descrp'+x);
+                    document.getElementById(x).appendChild(descrp);
+                    document.getElementById('descrp'+x).style.height='300px';
+                    document.getElementById('descrp'+x).style.width='800px';
+                    document.getElementById('descrp'+x).style.padding='0px';
+                    document.getElementById('descrp'+x).style.fontSize='1.5em';
+                    document.getElementById('descrp'+x).style.marginLeft='320px';
+                    document.getElementById('descrp'+x).style.position='relative';
+                    document.getElementById('descrp'+x).style.marginTop='0px';
+                    document.getElementById('descrp'+x).style.padding='0px';
+                    document.getElementById('descrp'+x).innerHTML='<p style="padding:0px; color:rgb(147, 3, 3)"><h3 style="margin:0px; color:rgb(147, 3, 3);font-family:Gill Sans, Gill Sans MT, Calibri, Trebuchet MS, sans-serif">Name: '+'\xa0'+element['Name']+'</h3>'+
+                        '<p style="color:rgb(147, 3, 3);margin:0px;font-family:Gill Sans, Gill Sans MT, Calibri, Trebuchet MS, sans-serif">'+
+                       '<br/>'+ 'IITB Roll Number: '+'\xa0'+element['IITB Roll Number']+
+                       '<br/>'+ 'Year Of Study: '+'\xa0'+element['Year of Study']+
+                       '<br/>'+ 'Age: '+'\xa0'+element['Age']+
+                       '<br/>'+ 'Gender: '+'\xa0'+element['Gender']+
+                       '<br/>'+ 'Email: '+'\xa0'+element['Email']+
+                       '<br/>'+ 'Interests: '+'\xa0'+element['Interests']+
+                       '<br/>'+ 'Hobbies: '+'\xa0'+element['Hobbies'] +'</p>'+'</p>';
+                        let k = document.getElementById(v);
+                        document.write('<br>');
+                        document.write('<br>');
+
+                        i++;
+                                }
+                            );
+                       }
+                );
+                fetch('./sample.json')
+        .then(res => res.json())
+        .then(
+            data => {
+                let element = data[0];
+                    let x = element['IITB Roll Number'];
+                    const profile = document.createElement("div");
+                    profile.setAttribute('id',x);
+                    document.body.appendChild(profile);
+                    if(i%2==0){
+                    document.getElementById(x).style.backgroundColor='rgb(248, 217, 248)';
+                }else{
+                    document.getElementById(x).style.backgroundColor='white';
+                }
+                    document.getElementById(x).style.border='2px solid rgb(208, 2, 81)';
+                    document.getElementById(x).style.boxShadow='10px 10px 10px palevioletred';
+                    document.getElementById(x).style.height='315px';
+                    document.getElementById(x).style.width='1060px';
+                    document.getElementById(x).style.margin='0px';
+                    document.getElementById(x).style.display='block';
+                    let path = element['Photo'];
+                    let img = document.createElement('img');
+                    img.setAttribute('id','img'+x)
+                    img.src = path;
+                    document.getElementById(x).appendChild(img);
+                    document.getElementById('img'+x).style.width='310px';
+                    document.getElementById('img'+x).style.float='left';
+                    const descrp= document.createElement('p');
+                    descrp.setAttribute('id','descrp'+x);
+                    descrp.setAttribute('class','small_div');
+                    document.getElementById(x).appendChild(descrp);
+                    document.getElementById('descrp'+x).style.height='300px';
+                    document.getElementById('descrp'+x).style.width='800px';
+                    document.getElementById('descrp'+x).style.padding='0px';
+                    document.getElementById('descrp'+x).style.fontSize='1.5em';
+                    document.getElementById('descrp'+x).style.marginLeft='320px';
+                    document.getElementById('descrp'+x).style.position='relative';
+                    document.getElementById('descrp'+x).style.marginTop='0px';
+                    document.getElementById('descrp'+x).style.padding='0px';
+                    document.getElementById('descrp'+x).innerHTML='<p style="padding:0px; color:rgb(147, 3, 3)"><h3 style="margin:0px; color:rgb(147, 3, 3);font-family:Gill Sans, Gill Sans MT, Calibri, Trebuchet MS, sans-serif">Name: '+'\xa0'+element['Name']+'</h3>'+
+                        '<p style="color:rgb(147, 3, 3);margin:0px;font-family:Gill Sans, Gill Sans MT, Calibri, Trebuchet MS, sans-serif">'+
+                       '<br/>'+ 'IITB Roll Number: '+'\xa0'+element['IITB Roll Number']+
+                       '<br/>'+ 'Year Of Study: '+'\xa0'+element['Year of Study']+
+                       '<br/>'+ 'Age: '+'\xa0'+element['Age']+
+                       '<br/>'+ 'Gender: '+'\xa0'+element['Gender']+
+                       '<br/>'+ 'Email: '+'\xa0'+element['Email']+
+                       '<br/>'+ 'Interests: '+'\xa0'+element['Interests']+
+                       '<br/>'+ 'Hobbies: '+'\xa0'+element['Hobbies'] +'</p>'+'</p>';
+                }
+                );
+</script>
+</html>
