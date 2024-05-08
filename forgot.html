@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @media only screen and (max-width:750px) {
+            #Login{
+            margin: auto;
+            background-color: rgb(253, 229, 229);
+            width: 350px;
+            border: 3px solid rgb(220, 53, 125);
+            box-shadow: 2px 2px 20px rgb(187, 0, 134) ;
+            background-image: linear-gradient(to top right,rgb(244, 169, 225),rgb(252, 251, 252));
+           background-attachment: fixed;
+        }
+        .submit{
+            height: 50px;
+            color:white;
+            background-color: rgb(226, 6, 131);
+            text-align: center;
+            margin-left: 80px;
+            width: 250px;
+            font-family: 'Ariel';
+            font-size: medium;
+            border: 3px solid rgb(226, 6, 131);
+        }
+        .submit:hover{
+            box-shadow: 2px 2px 15px rgb(179, 4, 127);
+            background-color:white;
+            color: rgb(179, 4, 127);
+            background-image: linear-gradient(to right,rgb(255, 255, 255), rgb(239, 127, 200),rgb(249, 215, 239));
+        }
+        input[type=text]:hover{
+            box-shadow: 2px 2px 6px rgb(179, 4, 127);
+        }
+        input[type=text]:focus{
+            outline: 1px solid rgb(179, 4, 127);     
+        }
+        input[type=text]{
+            width: 200px;
+            text-align: center;
+            border: 2px solid rgb(179, 4, 127);
+            height: 20px;
+            margin: auto;
+        }
+        #inp{
+            width: 1000px;
+            margin: auto;
+            height: 20px;
+            border: 3px solid rgb(179, 4, 127);
+        }
+        .hidden{
+            color:rgb(179, 4, 127);
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        #answer{
+            border: 2px solid rgb(179, 4, 127);
+            border-radius: 6px;
+            background-color: rgb(253, 249, 249);
+            color: rgb(179, 4, 127);
+            margin: auto;
+            width: 300px;
+            height: 60px;
+            display: none;
+            padding-top: 10px;
+        }
+        #Username{
+            margin-left: 70px;
+        }
+        #inp{
+            width: 75vw;
+        }
+        body{
+           background-image: linear-gradient(to bottom left,rgb(254, 161, 220),white);
+           background-attachment: fixed;
+        }
+        }
+        @media only screen and (min-width:550px){
+            
+        #Login{
+            margin: auto;
+            background-color: rgb(253, 229, 229);
+            width: 50vw;
+            border: 3px solid rgb(240, 57, 185);
+            box-shadow: 2px 2px 20px rgb(179, 4, 127);
+            background-image: linear-gradient(to top right,rgb(244, 169, 225),rgb(252, 251, 252));
+           background-attachment: fixed;
+        }
+        .submit{
+            height: 50px;
+            color:white;
+            background-color: rgb(226, 6, 131);
+            text-align: center;
+            margin-left: 37.5vw;
+            width: 25vw;
+            font-family: 'Ariel';
+            font-size: medium;
+            border: 3px solid rgb(226, 6, 131);
+        }
+        .submit:hover{
+            box-shadow: 2px 2px 15px rgb(179, 4, 127);
+            background-color:white;
+            color: rgb(179, 4, 127);
+            background-image: linear-gradient(to right,rgb(255, 255, 255), rgb(239, 127, 200),rgb(249, 215, 239));
+        }
+        input[type=text]:hover{
+            box-shadow: 2px 2px 6px rgb(179, 4, 127);
+        }
+        input[type=text]:focus{
+            outline: 1px solid rgb(179, 4, 127);
+        }
+        input[type=text]{
+            width: 25vw;
+            text-align: center;
+            border: 2px solid rgb(247, 64, 192);
+            height: 20px;
+            margin: auto;
+        }
+        #inp{
+            width: 1000px;
+            margin: auto;
+            height: 20px;
+            border: 3px solid rgb(179, 4, 127);
+        }
+        .hidden{
+            color:rgb(179, 4, 127);
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        #answer{
+            border: 2px solid rgb(179, 4, 127);
+            border-radius: 6px;
+            background-color: rgb(253, 249, 249);
+            color: rgb(179, 4, 127);
+            margin: auto;
+            width: 800px;
+            height: 40px;
+            display: none;
+            padding-top: 10px;
+        }
+        #Username{
+            margin-left: 12.5vw;
+        }
+        #inp{
+            width: 75vw;
+        }
+        body{
+           background-image: linear-gradient(to bottom left,rgb(254, 161, 220),white);
+           background-attachment: fixed;
+        }
+    }
+    </style>
+</head>
+<body style="background-color: rgb(246, 177, 177);">
+<h1 style="text-align: center;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;color: rgb(179, 4, 127);">Forgot Password</h2>
+<div id="Login">
+    <h2 style="text-align: center;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;color: rgb(179, 4, 127);">Username:</h2>
+    <input id="Username" type="text">
+    <br><br><br>
+</div>
+
+<h3 id="secretq"  style="text-align: center;"class="hidden"></h3>
+<h3 id="ans"  style="text-align: center;"class="hidden"></h3>
+<input type="text" style="display: none;" id="inp">
+<div  id="Answer" >
+    <br>
+<h2 id="answer" style="margin-top: 5px; text-align: center;display: none; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"></h3>
+</div>
+<br>
+<button class="submit" style="cursor: pointer;" id="back">
+    <h2 style="margin: -2px;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Go Back To Login!</h2>
+</button>
+<br><br>
+<button class="submit" style="cursor: pointer;" id="Submit">
+    <h2 style="margin: -2px;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Submit</h2>
+</button>
+<script>
+    document.getElementById('Submit').addEventListener('click',
+    function(){
+    let val = document.getElementById('Username').value;
+    fetch('./login.json')
+        .then(res => res.json())
+        .then(
+            data => {
+                data.forEach(element => {
+                       if(element.username==val){
+                        console.log('haha');
+                        document.getElementById('secretq').innerHTML=element.secret_question;
+                        document.getElementById('ans').innerHTML='Answer to the secret question';
+                        document.getElementById('inp').style.display='block';
+                            document.getElementById('Submit').addEventListener('click',
+                                function(){
+                                    let ans = document.getElementById('inp').value;
+                                    if(ans==element.secret_answer){
+                                        document.getElementById('answer').innerHTML='Your Password is '+element.password;
+                                        document.getElementById('answer').style.display='block';
+                                    }
+                                }
+                        );
+                       }
+                });
+            }
+        )
+    }
+    );
+    document.getElementById('back').addEventListener('click',function(){
+        window.location.href='login.html';
+    });
+</script>
+</body>
+</html>
