@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @media only screen and (max-width:750px) {
+            .header{
+                text-align: center;
+                color: rgb(179, 4, 127);
+            }
+            #Login{
+            margin: auto;
+            background-color: rgb(252, 250, 250);
+            width: 400px;
+            border: 3px solid rgb(250, 118, 213);
+            box-shadow: 2px 2px 20px rgb(179, 4, 127) ;
+            background-image: linear-gradient(to top right,rgb(244, 169, 225),rgb(252, 251, 252));
+           background-attachment: fixed;
+        }
+        .login{
+            color: rgb(255, 253, 253);
+            background-color:rgb(179, 4, 127);
+            text-align: center;
+            margin: auto;
+            width: 250px;
+            font-family: 'Ariel';
+            font-size: medium;
+            border: 3px solid rgb(179, 4, 127);
+        }
+        .login:hover{
+            box-shadow: 2px 2px 15px rgb(179, 4, 127);
+            background-color:rgb(255, 253, 253);
+            color:rgb(179, 4, 127);
+            background-image: linear-gradient(to right,rgb(252, 249, 251), rgb(239, 127, 200),rgb(249, 215, 239));
+        }
+        /* input[type=text]:focus{
+            border: 3px solid rgb(112, 3, 117);
+        } */
+        input[type=text]:hover{
+            box-shadow: 2px 2px 6px rgb(179, 4, 127);
+        }
+        input[type=text]:focus{
+            outline: 1px solid rgb(179, 4, 127);     
+        }
+        input[type=text]{
+            width: 250px;
+            text-align: center;
+            border: 2px solid rgb(248, 136, 215);
+            height: 20px;
+            margin: auto;
+            margin-left: 75px;
+        }
+        body{
+           background-image: linear-gradient(to bottom left,rgb(250, 126, 205),rgb(254, 238, 249));
+           background-attachment: fixed;
+        }
+        }
+        @media only screen and (min-width:750px) {
+            
+        #Login{
+            margin: auto;
+            background-color: rgb(253, 203, 232);
+            width: 600px;
+            border: 3px solid rgb(254, 0, 178);
+            box-shadow: 2px 2px 30px rgb(254, 0, 178) ;
+            background-image: linear-gradient(to top right,rgb(244, 169, 225),rgb(252, 251, 252));
+           background-attachment: fixed;
+        }
+        .login{
+            color: rgb(255, 253, 253);
+            background-color:rgb(179, 4, 127);
+            text-align: center;
+            margin: auto;
+            width: 400px;
+            font-family: 'Ariel';
+            font-size: medium;
+            border: 3px solid rgb(179, 14, 126);
+        }
+        .login:hover{
+            box-shadow: 2px 2px 15px rgb(179, 4, 127);
+            background-color:rgb(255, 253, 253);
+            color:rgb(179, 4, 127);
+            background-image: linear-gradient(to right,rgb(255, 255, 255), rgb(239, 127, 200),rgb(249, 215, 239));
+        }
+        input[type=text]:hover{
+            box-shadow: 2px 2px 6px rgb(179, 4, 127);
+        }
+        input[type=text]:focus{
+            outline: 1px solid rgb(179, 4, 127);     
+        }
+        input[type=text]{
+            width: 300px;
+            text-align: center;
+            border: 2px solid rgb(253, 160, 225);
+            height: 20px;
+            margin: auto;
+            margin-left: 150px;
+        }
+        body{
+           background-image: linear-gradient(to bottom left,rgb(254, 161, 220),white);
+           background-attachment: fixed;
+        }
+    }
+    </style>
+</head>
+<body>
+<h1 class="header" style="text-align: center; color:rgb(179, 4, 127); font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Welcome To Our Dating Website!</h1>
+<h2 class="header" style="text-align: center; color: rgb(179, 4, 127); font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Login</h2>
+<div id="Login">
+    <br>
+    <h2 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; text-align: center; color: rgb(179, 4, 127);">Username:</h2>
+    <input type="text"  id="Username">
+    <br>
+    <h2 style="text-align: center; color: rgb(179, 4, 127); font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" >Password:</h2>
+    <input type="text" id="Password">
+    <br><br><br>
+    <button class="login" style="display: block; cursor: pointer;" id="login_button">
+        <h3 style="margin: 8px;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" id="log">Login</h3>
+    </button>
+    <br>
+    <button id="forgot_button" class="login" style="display: block; cursor: pointer; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+        <h3 style="margin: 8px;" id="forgot">Forget Password</h3>
+    </button>
+    <br><br><br>
+</div>
+<script >
+    document.getElementById('login_button').addEventListener('click',function(){
+        let c = 0;
+        let name = document.getElementById('Username').value;
+        let pass = document.getElementById('Password').value;
+        fetch('./login.json')
+        .then(res => res.json())
+        .then(
+            data => {
+                data.forEach(element => {
+                    if(element['username']==name){
+                        if(element['password']==pass){
+                            window.location.href='dating.html';
+                        }
+                    }
+                }
+            );
+            }
+        );
+        
+    });
+    document.getElementById('forgot_button').addEventListener('click',function(){
+        window.location.href='forgot.html';
+    });
+</script>
+</body>
+</html>
