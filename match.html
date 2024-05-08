@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @media only screen and (max-width:550px) {
+            h1,h2,h3{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-align: center;
+        }
+        #profile{
+            background-color: rgb(254, 234, 241);
+            margin: auto;
+            width: 400px;
+            border: 2px solid rgb(252, 4, 4);
+            border-radius: 10px;
+            box-shadow: 1px 1px 20px rgb(228, 2, 141);
+        }
+        img{
+            width: 200px;
+            height:200px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        h1,h2,h3{
+            text-align: center;
+            color: rgb(98, 2, 2);
+        }
+        h1{
+            text-shadow: 0 0 4px rgb(253, 38, 38);
+        }
+        #canvas{
+            height: 0px;
+        }
+        canvas{
+            height: 0px;
+        }
+        .button{
+            cursor: pointer;
+            color: rgb(255, 253, 253);
+            background-color:rgb(186, 4, 104);
+            text-align: center;
+            margin: auto;
+            width: 200px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 1.25em;
+            border: 3px solid rgb(191, 2, 116);
+            border-radius: 10px;
+            margin-left: 95px;
+            margin-bottom: 10px;
+            height: 60px;
+        }
+        .button:hover{
+            box-shadow: 2px 2px 15px rgb(144, 2, 73);
+            background-color:rgb(255, 253, 253);
+            color:rgb(147, 3, 77);
+        }
+    }
+        @media only screen and (min-width:550px){
+            
+        h1,h2,h3{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        #profile{
+            background-color: rgb(254, 234, 241);
+            margin: auto;
+            width: 600px;
+            border: 2px solid rgb(252, 4, 4);
+            border-radius: 10px;
+            box-shadow: 1px 1px 20px rgb(228, 2, 141);
+        }
+        img{
+            width: 400px;
+            height:400px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        h1,h2,h3{
+            text-align: center;
+            color: rgb(98, 2, 2);
+        }
+        h1{
+            text-shadow: 0 0 4px rgb(253, 38, 38);
+        }
+        #canvas{
+            height: 0px;
+        }
+        canvas{
+            height: 0px;
+        }
+        .button{
+            cursor: pointer;
+            color: rgb(255, 253, 253);
+            background-color:rgb(186, 4, 104);
+            text-align: center;
+            margin: auto;
+            width: 200px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 1.25em;
+            border: 3px solid rgb(191, 2, 116);
+            border-radius: 10px;
+            margin-left: 95px;
+            margin-bottom: 10px;
+            height: 60px;
+        }
+        .button:hover{
+            box-shadow: 2px 2px 15px rgb(144, 2, 73);
+            background-color:rgb(255, 253, 253);
+            color:rgb(147, 3, 77);
+        }
+        #back{
+            margin-left: 44vw;
+        }
+        #mail{
+            margin-left: 44vw;
+        }
+    }
+    </style>
+</head>
+<body style="background-color: rgb(255, 208, 192);">
+    <canvas id="confetti"></canvas>
+    <h1 style="text-align: center;">Here Are Your Match Deails!</h1>
+    <div id="profile">
+        <br>
+        <div id="pro_image">
+        </div>
+        <h2 id="pro_name">u</h2>
+        <br>
+        <h3 id="pro_roll">u</h3>
+        <h3 id="pro_year">u</h3>
+        <h3 id="pro_age">u</h3>
+        <h3 id="pro_gender">u</h3>
+        <h3 id="pro_email">u</h3>
+        <h3 id="pro_interests">u</h3>
+        <h3 id="pro_hobbies">u</h3>
+    </div>
+    <br>
+    <button class="button" id="back">Try Again!</button>
+    <button class="button" id="mail"  onclick="sendEmail()">Get a Mail of Match Details</button>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+<script>
+            let path = localStorage.getItem('Photo');
+            let img = document.createElement('img');
+            img.src = path;
+            // console.log(path);
+            // console.log(img.src);
+            document.getElementById('pro_image').appendChild(img);
+            let name=localStorage.getItem('Name');
+            document.getElementById('pro_name').innerHTML="Name: "+name;
+            document.getElementById('pro_roll').innerHTML='Roll Number: '+ localStorage.getItem('IITB Roll Number');
+            document.getElementById('pro_year').innerHTML='Year Of Study: '+localStorage.getItem('Year Of Study');
+            document.getElementById('pro_age').innerHTML='Age: '+localStorage.getItem('Age');
+            document.getElementById('pro_gender').innerHTML='Gender: '+localStorage.getItem('Gender');
+            document.getElementById('pro_email').innerHTML='Email: '+localStorage.getItem('Email');
+            document.getElementById('pro_interests').innerHTML='Interests: '+localStorage.getItem('Interests');
+            document.getElementById('pro_hobbies').innerHTML='Hobbies: '+localStorage.getItem('Hobbies');
+            const canvas=document.getElementById('confetti');
+            const confetti = new JSConfetti();
+            confetti.addConfetti();
+            document.getElementById('back').addEventListener('click',
+            function(){
+                window.location.href="dating.html";
+            }
+            );
+</script>
+</html>
