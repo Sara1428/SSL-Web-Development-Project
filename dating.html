@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* media query */
+        @media only screen and (max-width:550px) {
+            h1{
+                text-align: center;
+            }
+            #input{
+            width: 400px;
+            margin: auto;
+            border: 2px solid rgb(144, 2, 90);
+            box-shadow: 1px 1px 15px;
+            background-color:rgb(255, 255, 255) ;
+        }
+        .headings{
+            text-align: center;
+        }
+        input[type=text]:hover{
+            box-shadow: 2px 2px 6px rgb(144, 2, 97);
+        }
+        input[type=text]:focus{
+            outline: 1px solid rgb(144, 2, 78);     
+        }
+        input[type=text]{
+            width: 200px;
+            text-align: center;
+            border: 2px solid rgb(182, 2, 119);
+            height: 20px;
+            margin-left: 95px;
+        }
+        input[type=radio]{
+            border-radius: 50%;
+            accent-color:rgb(144, 2, 99) ;
+        }
+        input[type=checkbox]{
+            accent-color: rgb(144, 2, 64);
+        }
+        .radio{
+            margin: 0px;
+        }
+        .button{
+            display: inline;
+            height: 40px;
+            margin-left: 70px;
+            border: 3px solid rgb(144, 2, 75);
+            border-radius: 10px;
+            box-shadow: 1px 1px 15px;
+        }
+        h1,h3{
+            color: rgb(179, 4, 97);
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        label{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: rgb(184, 1, 65);
+            font-size: 1.025em;
+            margin-right: 5px;
+        }
+        #int_div{
+            margin: auto; 
+            padding-left: 50px;
+        }
+        #hob_div{
+            margin: auto; 
+            padding-left: 55px;
+        }
+        #movie{
+            margin-right: 60px;
+        }
+        #tech{
+            margin-right: 50px;
+        }
+        #code{
+            margin-right: 60px;
+        }
+        #paint{
+            margin-right: 120px;
+        }
+        #watch{
+            margin-right: 90px;
+        }
+        #music{
+            margin-right: 100px;
+        }
+        .button{
+            cursor: pointer;
+            color: rgb(255, 253, 253);
+            background-color:rgb(186, 4, 104);
+            text-align: center;
+            margin: auto;
+            width: 200px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 1.25em;
+            border: 3px solid rgb(191, 2, 116);
+            border-radius: 10px;
+            margin-left: 95px;
+            margin-bottom: 10px;
+            height: 60px;
+        }
+        .button:hover{
+            box-shadow: 2px 2px 15px rgb(144, 2, 73);
+            background-color:rgb(255, 253, 253);
+            color:rgb(147, 3, 77);
+        }
+        #email_inp{
+            margin-left: 45px; 
+            width: 300px;
+            text-align: "center"
+        }
+        .rad{
+            margin-right:10px;
+        }
+        #rad_button{
+            margin: auto;
+            padding-left: 70px;
+        }
+        body{
+           background-image: linear-gradient(to bottom left,rgb(248, 146, 175),white);
+           background-attachment: fixed;
+        }
+        }
+        @media only screen and (min-width:550px) {
+            
+        #input{
+            width: 600px;
+            margin: auto;
+            border: 1px solid rgb(252, 121, 165);
+            box-shadow: 1px 1px 15px;
+            background-color:rgb(255, 255, 255) ;
+        }
+        .headings{
+            text-align: center;
+        }
+        input[type=text]:hover{
+            box-shadow: 2px 2px 6px rgb(144, 2, 80);
+        }
+        input[type=text]:focus{
+            outline: 1px solid rgb(144, 2, 61);     
+        }
+        input[type=text]{
+            width: 300px;
+            text-align: center;
+            border: 2px solid rgb(144, 2, 64);
+            height: 20px;
+            margin-left: 145px;
+        }
+        input[type=radio]{
+            border-radius: 50%;
+            accent-color:rgb(144, 2, 80) ;
+        }
+        input[type=checkbox]{
+            accent-color: rgb(144, 2, 2);
+        }
+        .radio{
+            margin: 0px;
+        }
+        .button{
+            display: inline;
+            height: 40px;
+            margin-left: 70px;
+            border: 3px solid rgb(144, 2, 73);
+            box-shadow: 1px 1px 15px;
+        }
+        h1,h3{
+            color: rgb(134, 11, 68);
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        label{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: rgb(144, 2, 123);
+            font-size: 1.025em;
+            margin-right: 5px;
+        }
+        #tech{
+            margin-right: 14px;
+        }
+        #int_div{
+            margin: auto; 
+            padding-left: 50px;
+        }
+        #hob_div{
+            margin: auto; 
+            padding-left: 55px;
+        }
+        #paint{
+            margin-right:90px;
+        }
+        #music{
+            margin-right: 100px;
+        }
+        .button{
+            cursor: pointer;
+            color: rgb(255, 253, 253);
+            background-color:rgb(147, 3, 65);
+            text-align: center;
+            margin: auto;
+            width: 400px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 1.25em;
+            border: 3px solid rgb(147, 3, 75);
+            margin-left: 95px;
+            margin-bottom: 10px;
+        }
+        .button:hover{
+            box-shadow: 2px 2px 15px rgba(144, 2, 99, 0.985);
+            background-color:rgb(255, 253, 253);
+            color:rgb(147, 3, 101);
+        }
+        #email_inp{
+            margin-left: 45px; 
+            width: 500px;
+            text-align: "center"
+        }
+        .rad{
+            margin-right:30px;
+        }
+        #rad_button{
+            margin: auto;
+            padding-left: 165px;
+        }
+        body{
+           background-image: linear-gradient(to bottom left,rgb(248, 146, 175),white);
+           background-attachment: fixed;
+        }
+    }
+    </style>
+</head>
+<body style="background-color:rgb(246, 177, 177);" onload="localStorage.setItem('mail',document.getElementById('email_inp').value);">
+    <h1 style="text-align: center;">Find Your Match!</h2>
+    <div id="input">
+        <h3 class="headings" id="roll_num"> IITB Roll Number:</h3>
+        <input type="text">
+        <br><br>
+        <h3 class="headings"> Name:</h3>
+        <input type="text">
+        <br><br>
+        <h3 class="headings"> Year of Study:</h3>
+        <input type="text" id="year">
+        <br><br>
+        <h3 class="headings"> Age:</h3>
+        <input type="text" id="Age">
+        <br><br>
+        <h3 class="headings"> Gender:</h3>
+        <div id="rad_button">
+        <input type="radio" name="Gender">
+        <label class="rad">Male</label>
+        <input type="radio" name="Gender">
+        <label class="rad">Female</label>
+        <input type="radio" name="Gender">
+        <label class="rad">None</label>
+        </div>
+        <br><br>
+        <h3 class="headings"> Email:</h3>
+        <input id="email_inp" type="text">
+        <br><br>
+        
+        <h3 class="headings"> Interests:</h3>
+        <div id="int_div">
+        <input type="checkbox" name="Interests" value="Traveling">
+        <label for="checkbox">Traveling</label>
+        <input type="checkbox" name="Interests" value="Sports">
+        <label for="checkbox">Sports</label>
+        <input type="checkbox" name="Interests" value="Movies">
+        <label for="checkbox" id="movie">Movies</label>
+        <input type="checkbox" name="Interests" value="Music">
+        <label for="checkbox">Music</label>
+        <input type="checkbox" name="Interests" value="Literature">
+        <label for="checkbox">Literature</label>
+        <input type="checkbox" name="Interests" value="Technology">
+        <label for="checkbox"  id="tech">Technology</label>
+        <input type="checkbox" name="Interests" value="Fashion">
+        <label for="checkbox">Fashion</label>
+        <input type="checkbox" name="Interests" value="Art">
+        <label for="checkbox">Art</label>
+        </div>
+        <h3 class="headings"> Hobbies:</h3>
+        <div id="hob_div">
+        <input type="checkbox" name="Hobbies" value="Reading">
+        <label for="checkbox">Reading</label>
+        <input type="checkbox" name="Hobbies" value="Cooking">
+        <label for="checkbox">Cooking</label>
+        <input type="checkbox" name="Hobbies" value="Coding">
+        <label for="checkbox" id="code">Coding</label>
+        <input type="checkbox" name="Hobbies" value="Gardening">
+        <label for="checkbox">Gardening</label>
+        <input type="checkbox" name="Hobbies" value="Painting">
+        <label for="checkbox" id="paint">Painting</label>
+        <input type="checkbox" name="Hobbies" value="Watching YouTube/Instagram">
+        <label for="checkbox" id="watch">Watching YouTube/Instagram</label>
+        <input type="checkbox" name="Hobbies" value="Playing Musical Instruments">
+        <label for="checkbox" id="music">Playing Musical Instruments</label>
+        <input type="checkbox" name="Hobbies" value="Photography">
+        <label for="checkbox">Photography</label>
+        </div>
+        <br><br>
+        <button class="button" id="result">Find Match!</button>
+        <button class="button" id="scroll">Scroll Through Profiles</button>
+        <button class="button" id="out">Log Out!</button>
+        <br><br>
+    </div>
+    <script>
+        const fields=[];
+        const filter=[];
+        const items =[];
+        let max_match = -1; //variable for storing max. match number
+        let dict = {};
+        document.getElementById('result').addEventListener('click',
+        function(){
+        let ele1 = document.getElementsByName('Interests');
+        for(let i=0;i<ele1.length;i++){
+            if(ele1[i].checked){
+                fields.push(ele1[i].value);
+            }
+        }
+        let ele2 = document.getElementsByName('Hobbies');
+        for(let i=0;i<ele2.length;i++){
+            if(ele2[i].checked){
+                fields.push(ele2[i].value);
+            }
+        }
+        let roll = document.getElementById('roll_num').value;
+        fetch('./students.json')
+        .then(res => res.json())
+        .then(
+            data => {
+                data.forEach(element => {
+                                    if(roll!=element['IITB Roll Number']){
+                                    let interests = element.Interests;
+                                    for(let i=0;i<interests.length;i++){
+                                    items.push(element.Interests[i]);
+                                    }
+                                    let hobbies = element.Hobbies;
+                                    for(let i=0;i<hobbies.length;i++){
+                                    items.push(element.Hobbies[i]);
+                                    }
+                                    console.log(items);
+                                    let match = 0;
+                                    for(let i=0;i<fields.length;i++){
+                                        let item=fields[i];
+                                        for(let j=0;j<items.length;j++){
+                                            if(item==items[j]){
+                                                match++;
+                                            }
+                                        }
+                                    }
+                                    if(match>max_match){
+                                            max_match=match;
+                                            dict['Year Of Study']=element['Year of Study'];
+                                            dict['IITB Roll Number']=element['IITB Roll Number'];
+                                            dict['Name']=element['Name'];
+                                            dict['Age']=element['Age'];
+                                            dict['Gender']=element['Gender'];
+                                            dict['Interests']=element['Interests'];
+                                            dict['Hobbies']=element['Hobbies'];
+                                            dict['Email']=element['Email'];
+                                            dict['Photo']=element['Photo'];
+                                    }
+                                    items.length=0;
+                                }
+                            }
+                        )
+                        localStorage.setItem('Year Of Study',dict['Year Of Study']);
+                        localStorage.setItem('Gender',dict['Gender']);
+                        localStorage.setItem('IITB Roll Number',dict['IITB Roll Number']);
+                        localStorage.setItem('Age',dict['Age']);
+                        localStorage.setItem('Email',dict['Email']);
+                        localStorage.setItem('Interests',dict['Interests']);
+                        localStorage.setItem('Hobbies',dict['Hobbies']);
+                        localStorage.setItem('Photo',dict['Photo']);
+                        localStorage.setItem('Name',dict['Name']);
+                       }
+                );
+        }
+        );
+        document.getElementById('result').addEventListener('click',function(){
+            window.location.href='match.html';
+        });
+        document.getElementById('out').addEventListener('click',function(){
+            window.location.href='login.html';
+        });
+        document.getElementById('scroll').addEventListener('click',function(){
+            window.location.href='scroll_or_swipe.html';
+        });
+    </script>
+</body>
+</html>
